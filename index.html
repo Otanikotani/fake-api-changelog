@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayFlow API - Changelog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .changelog {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        .version {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .version:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .version-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .version-number {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .version-date {
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+
+        .version-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-latest {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .badge-breaking {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .change-section {
+            margin-bottom: 25px;
+        }
+
+        .change-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .change-type {
+            font-size: 0.85em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .change-type.added {
+            color: #28a745;
+        }
+
+        .change-type.changed {
+            color: #ffc107;
+        }
+
+        .change-type.fixed {
+            color: #17a2b8;
+        }
+
+        .change-type.deprecated {
+            color: #fd7e14;
+        }
+
+        .change-type.removed {
+            color: #dc3545;
+        }
+
+        .change-type.security {
+            color: #6610f2;
+        }
+
+        .change-type::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+
+        .changes-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .changes-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #495057;
+        }
+
+        .changes-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .code {
+            background-color: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .changelog {
+                padding: 25px;
+            }
+
+            .version-header {
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PayFlow API Changelog</h1>
+            <p>Track updates, improvements, and fixes to our payment processing API</p>
+        </header>
+
+        <div class="changelog">
+            <!-- Version 2.4.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.4.0</span>
+                    <span class="version-badge badge-latest">Latest</span>
+                    <span class="version-date">October 15, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/webhooks/test</span> endpoint for webhook testing during development</li>
+                        <li>Support for Apple Pay and Google Pay in <span class="code">/v2/payments/create</span></li>
+                        <li>Real-time payment status updates via WebSocket connections</li>
+                        <li>New <span class="code">metadata</span> field in transaction responses for custom tracking data</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved response times for <span class="code">/v2/payments/list</span> endpoint by 40%</li>
+                        <li>Updated rate limiting to 1000 requests per minute for premium tier</li>
+                        <li>Enhanced error messages with more detailed validation feedback</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved issue where refund webhook events were not firing for partial refunds</li>
+                        <li>Fixed timezone handling in <span class="code">created_at</span> timestamps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.3.2 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.3.2</span>
+                    <span class="version-date">September 28, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Critical security patch for API key validation</li>
+                        <li>Fixed race condition in concurrent payment processing</li>
+                        <li>Resolved 429 rate limit errors occurring incorrectly for some users</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Enhanced encryption for stored payment methods</li>
+                        <li>Implemented additional fraud detection rules</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.3.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.3.0</span>
+                    <span class="version-date">August 12, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/customers/search</span> endpoint with advanced filtering options</li>
+                        <li>Support for multi-currency transactions in 40+ currencies</li>
+                        <li>Batch payment processing via <span class="code">/v2/payments/batch</span></li>
+                        <li>New subscription management endpoints under <span class="code">/v2/subscriptions</span></li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Updated <span class="code">customer</span> object schema to include <span class="code">preferred_language</span></li>
+                        <li>Increased maximum description length from 200 to 500 characters</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type deprecated">Deprecated</div>
+                    <ul class="changes-list">
+                        <li>The <span class="code">/v1/payments</span> endpoints will be sunset on January 1, 2026</li>
+                        <li><span class="code">legacy_customer_id</span> field will be removed in v3.0</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.2.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.2.1</span>
+                    <span class="version-date">July 5, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Corrected pagination issue in <span class="code">/v2/transactions</span> endpoint</li>
+                        <li>Fixed incorrect currency conversion rates for EUR/GBP pairs</li>
+                        <li>Resolved webhook delivery failures for endpoints with special characters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.2.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.2.0</span>
+                    <span class="version-badge badge-breaking">Breaking</span>
+                    <span class="version-date">June 18, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>OAuth 2.0 authentication support for third-party integrations</li>
+                        <li>New <span class="code">/v2/disputes</span> endpoints for chargeback management</li>
+                        <li>Sandbox environment with test mode API keys</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Breaking:</strong> Renamed <span class="code">card_token</span> to <span class="code">payment_method_token</span> across all endpoints</li>
+                        <li><strong>Breaking:</strong> Error response structure now includes <span class="code">error_code</span> and <span class="code">request_id</span></li>
+                        <li>Updated webhook signature algorithm to HMAC-SHA256</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type removed">Removed</div>
+                    <ul class="changes-list">
+                        <li>Removed deprecated <span class="code">/v1/tokens</span> endpoint</li>
+                        <li>Discontinued support for MD5 webhook signatures</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Version 2.1.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.1.0</span>
+                    <span class="version-date">May 2, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced <span class="code">/v2/reports</span> endpoints for transaction analytics</li>
+                        <li>Added support for 3D Secure authentication</li>
+                        <li>New webhook event types: <span class="code">payment.processing</span> and <span class="code">payment.pending</span></li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved API documentation with interactive examples</li>
+                        <li>Enhanced idempotency key handling with 48-hour retention</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed issue where decimal amounts were truncated in some currencies</li>
+                        <li>Resolved timeout issues for large batch operations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 PayFlow API. All rights reserved. | <a href="#" style="color: #667eea; text-decoration: none;">Documentation</a> | <a href="#" style="color: #667eea; text-decoration: none;">API Reference</a></p>
+        </footer>
+    </div>
+</body>
+</html>
