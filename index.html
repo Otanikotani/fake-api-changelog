@@ -237,7 +237,6 @@
             <div class="version">
                 <div class="version-header">
                     <span class="version-number">v2.4.1</span>
-                    <span class="version-badge badge-latest">Latest</span>
                     <span class="version-date">October 26, 2025</span>
                 </div>
 
@@ -246,6 +245,81 @@
                     <ul class="changes-list">
                         <li>Resolved memory leak in webhook delivery system</li>
                         <li>Fixed incorrect status code returned for expired API tokens</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.5.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.5.0</span>
+                    <span class="version-date">November 3, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/invoices/auto-charge</span> endpoint for automatic payment collection</li>
+                        <li>Support for cryptocurrency payments (BTC, ETH, USDC)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.5.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.5.1</span>
+                    <span class="version-date">November 10, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Optimized database queries for payment history endpoint</li>
+                        <li>Reduced webhook delivery latency by 60%</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.5.2 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.5.2</span>
+                    <span class="version-date">November 17, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented stricter validation for merchant account creation</li>
+                        <li>Added IP whitelisting support for API requests</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.6.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.6.0</span>
+                    <span class="version-date">November 24, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced <span class="code">/v2/payouts</span> endpoints for marketplace platforms</li>
+                        <li>Added support for instant payouts to debit cards</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed issue where declined payments weren't logging proper error details</li>
                     </ul>
                 </div>
             </div>
