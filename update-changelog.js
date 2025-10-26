@@ -61,8 +61,8 @@ versionHTML += `            </div>
 `;
 
 // Find the first version entry and insert before it
-// Look for the first <!-- Version comment to insert before
-const versionCommentMatch = html.match(/<!-- Version \d+\.\d+\.\d+ -->/);
+// Look for the first version comment (supports multiple formats: <!-- v2.4.2 --> or <!-- Version 2.4.0 -->)
+const versionCommentMatch = html.match(/<!-- (?:Version )?v?\d+\.\d+\.\d+ -->/);
 
 if (versionCommentMatch) {
   const insertIndex = html.indexOf(versionCommentMatch[0]);
