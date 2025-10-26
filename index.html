@@ -340,6 +340,1620 @@
                 </div>
             </div>
 
+
+            <!-- v2.6.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.6.1</span>
+                    <span class="version-date">December 1, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Corrected rounding errors in currency conversion for JPY</li>
+                        <li>Fixed webhook retry logic not respecting exponential backoff</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.7.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.7.0</span>
+                    <span class="version-date">December 8, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/fraud/review</span> endpoint for manual fraud review workflows</li>
+                        <li>Added machine learning-based fraud scoring</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type deprecated">Deprecated</div>
+                    <ul class="changes-list">
+                        <li>The <span class="code">use_3ds</span> parameter is deprecated in favor of <span class="code">authentication_method</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.7.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.7.1</span>
+                    <span class="version-date">December 15, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Updated maximum file size for dispute evidence uploads to 10MB</li>
+                        <li>Improved error messages for invalid payment method tokens</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.8.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.8.0</span>
+                    <span class="version-date">December 22, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for ACH bank transfers in the US</li>
+                        <li>New <span class="code">/v2/balance</span> endpoint to check available funds</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.8.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.8.1</span>
+                    <span class="version-date">December 29, 2025</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved issue with idempotency keys not working for batch payments</li>
+                        <li>Fixed timestamp precision loss in payment created events</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.9.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.9.0</span>
+                    <span class="version-badge badge-breaking">Breaking</span>
+                    <span class="version-date">January 5, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New API versioning scheme with explicit version headers</li>
+                        <li>Added GraphQL endpoint at <span class="code">/graphql</span></li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Breaking:</strong> All date fields now return ISO 8601 format with milliseconds</li>
+                        <li><strong>Breaking:</strong> Removed <span class="code">legacy_customer_id</span> field from responses</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.9.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.9.1</span>
+                    <span class="version-date">January 12, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed GraphQL pagination cursor encoding issues</li>
+                        <li>Resolved timezone inconsistencies in scheduled payment processing</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.10.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.10.0</span>
+                    <span class="version-date">January 19, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for Buy Now Pay Later (BNPL) payment methods</li>
+                        <li>New <span class="code">/v2/checkout/sessions</span> for hosted checkout pages</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.10.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.10.1</span>
+                    <span class="version-date">January 26, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Increased rate limit for webhook endpoints to 5000 per hour</li>
+                        <li>Enhanced checkout session customization options</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.11.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.11.0</span>
+                    <span class="version-date">February 2, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Real-time transaction monitoring dashboard API</li>
+                        <li>Support for SEPA Direct Debit payments in Europe</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented PCI DSS 4.0 compliance measures</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.11.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.11.1</span>
+                    <span class="version-date">February 9, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed race condition in refund processing for high-volume merchants</li>
+                        <li>Corrected webhook signature validation for URLs with query parameters</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.12.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.12.0</span>
+                    <span class="version-date">February 16, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/terminal</span> endpoints for point-of-sale integrations</li>
+                        <li>Added support for tap-to-pay on iPhone</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.12.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.12.1</span>
+                    <span class="version-date">February 23, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Improved customer object search with fuzzy matching</li>
+                        <li>Updated SDK documentation with more code examples</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.13.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.13.0</span>
+                    <span class="version-date">March 2, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for recurring payment schedules with flexible intervals</li>
+                        <li>New <span class="code">/v2/tax/calculate</span> endpoint for automated tax calculation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.13.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.13.1</span>
+                    <span class="version-date">March 9, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved issue with subscription cancellation webhooks not firing</li>
+                        <li>Fixed decimal precision in tax calculation for Canadian GST</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.14.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.14.0</span>
+                    <span class="version-date">March 16, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced payment links for no-code payment collection</li>
+                        <li>Added biometric authentication support for mobile SDKs</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type deprecated">Deprecated</div>
+                    <ul class="changes-list">
+                        <li>The <span class="code">/v1</span> API will be fully deprecated on July 1, 2026</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.14.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.14.1</span>
+                    <span class="version-date">March 23, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed payment link expiration not respecting custom durations</li>
+                        <li>Corrected validation error for phone numbers with country codes</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.15.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.15.0</span>
+                    <span class="version-date">March 30, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/identity/verify</span> endpoints for KYC compliance</li>
+                        <li>Support for digital wallets (PayPal, Venmo, Cash App)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.15.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.15.1</span>
+                    <span class="version-date">April 6, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced webhook payload to include merchant metadata</li>
+                        <li>Improved API response times by optimizing internal caching</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.16.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.16.0</span>
+                    <span class="version-date">April 13, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for installment payments in Brazil (Pix Parcelado)</li>
+                        <li>New <span class="code">/v2/analytics</span> endpoints for revenue insights</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.16.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.16.1</span>
+                    <span class="version-date">April 20, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved timeout errors on analytics queries with large date ranges</li>
+                        <li>Fixed currency symbol display for lesser-known currencies</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.17.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.17.0</span>
+                    <span class="version-date">April 27, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced AI-powered payment routing for optimal success rates</li>
+                        <li>Support for QR code-based payments (WeChat Pay, Alipay)</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Enhanced anomaly detection for suspicious transaction patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.17.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.17.1</span>
+                    <span class="version-date">May 4, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed issue with payment routing not respecting merchant preferences</li>
+                        <li>Corrected QR code expiration handling</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.18.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.18.0</span>
+                    <span class="version-date">May 11, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/disputes/evidence/upload</span> for automated dispute management</li>
+                        <li>Support for multi-party payments (split payments)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.18.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.18.1</span>
+                    <span class="version-date">May 18, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Updated dispute evidence upload to support video files</li>
+                        <li>Improved split payment calculation accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.19.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.19.0</span>
+                    <span class="version-date">May 25, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for Open Banking payments in the UK</li>
+                        <li>New <span class="code">/v2/connect</span> endpoints for platform connect features</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.19.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.19.1</span>
+                    <span class="version-date">June 1, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved bank account verification delays in Open Banking flow</li>
+                        <li>Fixed platform fee calculation in multi-currency transactions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.20.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.20.0</span>
+                    <span class="version-date">June 8, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced smart retry logic for failed payments</li>
+                        <li>Support for subscription pause and resume functionality</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type removed">Removed</div>
+                    <ul class="changes-list">
+                        <li>Removed deprecated <span class="code">/v1/payments</span> endpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.20.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.20.1</span>
+                    <span class="version-date">June 15, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed smart retry not honoring merchant retry preferences</li>
+                        <li>Corrected subscription proration calculation for mid-cycle changes</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.21.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.21.0</span>
+                    <span class="version-date">June 22, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/cards/issuing</span> endpoints for virtual card creation</li>
+                        <li>Support for spending controls on issued cards</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.21.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.21.1</span>
+                    <span class="version-date">June 29, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced virtual card security with dynamic CVV codes</li>
+                        <li>Improved spending control granularity (per-merchant limits)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.22.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.22.0</span>
+                    <span class="version-date">July 6, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for account-to-account payments (A2A)</li>
+                        <li>New <span class="code">/v2/compliance/reports</span> for regulatory reporting</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented real-time AML screening for transactions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.22.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.22.1</span>
+                    <span class="version-date">July 13, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved performance issues with compliance report generation</li>
+                        <li>Fixed false positives in AML screening for common business names</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.23.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.23.0</span>
+                    <span class="version-date">July 20, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced <span class="code">/v2/financing</span> endpoints for merchant cash advances</li>
+                        <li>Support for invoice factoring and early payment discounts</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.23.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.23.1</span>
+                    <span class="version-date">July 27, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Updated financing eligibility criteria based on payment history</li>
+                        <li>Improved early payment discount calculation accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.24.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.24.0</span>
+                    <span class="version-date">August 3, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/treasury</span> endpoints for cash management</li>
+                        <li>Support for automated sweeps to external bank accounts</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.24.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.24.1</span>
+                    <span class="version-date">August 10, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed race condition in automated sweep scheduling</li>
+                        <li>Corrected yield calculation for treasury balance</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.25.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.25.0</span>
+                    <span class="version-badge badge-breaking">Breaking</span>
+                    <span class="version-date">August 17, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced webhook event versioning for backwards compatibility</li>
+                        <li>Support for custom webhook timeout configurations</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Breaking:</strong> Webhook payloads now include <span class="code">api_version</span> field</li>
+                        <li>Updated webhook retry policy to maximum 10 attempts over 3 days</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.25.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.25.1</span>
+                    <span class="version-date">August 24, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved issue with webhook versioning breaking older integrations</li>
+                        <li>Fixed custom timeout settings not applying to all webhook types</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.26.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.26.0</span>
+                    <span class="version-date">August 31, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/revenue-recognition</span> endpoints for accounting integration</li>
+                        <li>Support for deferred revenue scheduling</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.26.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.26.1</span>
+                    <span class="version-date">September 7, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced revenue recognition rules for subscription products</li>
+                        <li>Improved deferred revenue calculation for multi-year contracts</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.27.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.27.0</span>
+                    <span class="version-date">September 14, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for embedded finance widgets (payment forms, account management)</li>
+                        <li>New <span class="code">/v2/embeds</span> endpoints for UI component configuration</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.27.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.27.1</span>
+                    <span class="version-date">September 21, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed styling conflicts in embedded widgets with host page CSS</li>
+                        <li>Corrected mobile responsiveness issues in payment forms</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.28.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.28.0</span>
+                    <span class="version-date">September 28, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced real-time payment status notifications via Server-Sent Events (SSE)</li>
+                        <li>Support for payment orchestration with multiple processors</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type deprecated">Deprecated</div>
+                    <ul class="changes-list">
+                        <li>WebSocket connections for real-time updates deprecated in favor of SSE</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.28.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.28.1</span>
+                    <span class="version-date">October 5, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved SSE connection drops during high traffic periods</li>
+                        <li>Fixed payment orchestration fallback logic not triggering correctly</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.29.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.29.0</span>
+                    <span class="version-date">October 12, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/loyalty</span> endpoints for points and rewards programs</li>
+                        <li>Support for gift card creation and redemption</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.29.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.29.1</span>
+                    <span class="version-date">October 19, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced loyalty points calculation with tiered rewards</li>
+                        <li>Improved gift card balance check performance</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.30.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.30.0</span>
+                    <span class="version-date">October 26, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for cross-border payment optimization (currency routing)</li>
+                        <li>New <span class="code">/v2/fx/rates</span> endpoint for real-time exchange rates</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented advanced velocity checks for fraud prevention</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.30.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.30.1</span>
+                    <span class="version-date">November 2, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed currency routing selecting suboptimal paths</li>
+                        <li>Corrected FX rate precision for exotic currency pairs</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.31.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.31.0</span>
+                    <span class="version-date">November 9, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced <span class="code">/v2/reconciliation</span> endpoints for automated settlement matching</li>
+                        <li>Support for batch file exports in NACHA and ISO20022 formats</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.31.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.31.1</span>
+                    <span class="version-date">November 16, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved reconciliation mismatches for partial refunds</li>
+                        <li>Fixed batch file generation errors for special characters in names</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.32.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.32.0</span>
+                    <span class="version-date">November 23, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/risk/rules</span> endpoints for custom fraud rule configuration</li>
+                        <li>Support for device fingerprinting in mobile SDKs</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.32.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.32.1</span>
+                    <span class="version-date">November 30, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced device fingerprinting accuracy with behavioral biometrics</li>
+                        <li>Improved custom fraud rule editor with visual workflow builder</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.33.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.33.0</span>
+                    <span class="version-date">December 7, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for decentralized identity verification (DID)</li>
+                        <li>New <span class="code">/v2/credentials</span> endpoints for verifiable credentials</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.33.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.33.1</span>
+                    <span class="version-date">December 14, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed DID resolution timeout for certain blockchain networks</li>
+                        <li>Corrected credential verification for expired issuer certificates</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.34.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.34.0</span>
+                    <span class="version-date">December 21, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced payment guarantees for high-value transactions</li>
+                        <li>Support for escrow services via <span class="code">/v2/escrow</span> endpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.34.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.34.1</span>
+                    <span class="version-date">December 28, 2026</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced escrow release conditions with milestone tracking</li>
+                        <li>Improved payment guarantee pricing based on risk assessment</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.35.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.35.0</span>
+                    <span class="version-date">January 4, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/carbon/offset</span> endpoints for transaction carbon tracking</li>
+                        <li>Support for automatic carbon credit purchases</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented quantum-resistant encryption for stored payment methods</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.35.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.35.1</span>
+                    <span class="version-date">January 11, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved carbon calculation inconsistencies for international transactions</li>
+                        <li>Fixed credit purchase webhook not including transaction references</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.36.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.36.0</span>
+                    <span class="version-date">January 18, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for programmable payment workflows with custom logic</li>
+                        <li>New <span class="code">/v2/workflows</span> endpoints for workflow management</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.36.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.36.1</span>
+                    <span class="version-date">January 25, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced workflow editor with conditional branching and loops</li>
+                        <li>Improved workflow execution monitoring and debugging tools</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.37.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.37.0</span>
+                    <span class="version-date">February 1, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced AI-powered customer support chatbot integration</li>
+                        <li>Support for voice-initiated payments via smart speakers</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.37.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.37.1</span>
+                    <span class="version-date">February 8, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed chatbot not handling payment status inquiries correctly</li>
+                        <li>Corrected voice payment authentication flow for accessibility</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.38.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.38.0</span>
+                    <span class="version-badge badge-breaking">Breaking</span>
+                    <span class="version-date">February 15, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New API authentication using OAuth 2.1 with PKCE</li>
+                        <li>Support for fine-grained API permissions and scopes</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li><strong>Breaking:</strong> Legacy API key authentication will be removed in v3.0</li>
+                        <li>Updated all endpoints to require scope-based authorization</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.38.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.38.1</span>
+                    <span class="version-date">February 22, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved OAuth token refresh issues for long-lived sessions</li>
+                        <li>Fixed scope validation errors for backward-compatible endpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.39.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.39.0</span>
+                    <span class="version-date">March 1, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for payment scheduling with natural language (e.g., "every other Friday")</li>
+                        <li>New <span class="code">/v2/schedule/parse</span> endpoint for schedule interpretation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.39.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.39.1</span>
+                    <span class="version-date">March 8, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced natural language parsing for complex schedules</li>
+                        <li>Improved schedule preview with visual calendar representation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.40.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.40.0</span>
+                    <span class="version-date">March 15, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced blockchain settlement options for instant finality</li>
+                        <li>Support for stablecoin payments (USDC, USDT, DAI)</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type deprecated">Deprecated</div>
+                    <ul class="changes-list">
+                        <li>Legacy webhook signature algorithm (HMAC-SHA256) deprecated in favor of Ed25519</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.40.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.40.1</span>
+                    <span class="version-date">March 22, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed blockchain settlement confirmation delays during network congestion</li>
+                        <li>Corrected stablecoin exchange rate fetching for real-time pricing</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.41.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.41.0</span>
+                    <span class="version-date">March 29, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/notifications</span> endpoints for customer communication</li>
+                        <li>Support for multi-channel notifications (email, SMS, push, WhatsApp)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.41.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.41.1</span>
+                    <span class="version-date">April 5, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced notification templates with dynamic content and localization</li>
+                        <li>Improved delivery tracking and engagement analytics</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.42.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.42.0</span>
+                    <span class="version-date">April 12, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for embedded banking (BaaS) features</li>
+                        <li>New <span class="code">/v2/accounts</span> endpoints for virtual account creation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.42.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.42.1</span>
+                    <span class="version-date">April 19, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved virtual account number generation conflicts</li>
+                        <li>Fixed balance synchronization delays for embedded accounts</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.43.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.43.0</span>
+                    <span class="version-date">April 26, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced predictive payment failure detection</li>
+                        <li>Support for automatic payment method updating before expiration</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented biometric authentication for high-risk transactions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.43.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.43.1</span>
+                    <span class="version-date">May 3, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed false positives in payment failure prediction model</li>
+                        <li>Corrected automatic payment method update notification timing</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.44.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.44.0</span>
+                    <span class="version-date">May 10, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/pricing</span> endpoints for dynamic pricing strategies</li>
+                        <li>Support for A/B testing different payment experiences</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.44.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.44.1</span>
+                    <span class="version-date">May 17, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced A/B testing with statistical significance calculations</li>
+                        <li>Improved dynamic pricing rules with time-based conditions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.45.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.45.0</span>
+                    <span class="version-date">May 24, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for payment experience personalization based on user behavior</li>
+                        <li>New <span class="code">/v2/recommendations</span> for payment method suggestions</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.45.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.45.1</span>
+                    <span class="version-date">May 31, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed recommendation engine not considering regional payment preferences</li>
+                        <li>Corrected personalization cache invalidation for user preference changes</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.46.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.46.0</span>
+                    <span class="version-date">June 7, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced real-time currency hedging for merchants</li>
+                        <li>Support for forward contracts via <span class="code">/v2/hedging</span> endpoints</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.46.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.46.1</span>
+                    <span class="version-date">June 14, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced hedging strategies with volatility-based adjustments</li>
+                        <li>Improved forward contract settlement automation</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.47.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.47.0</span>
+                    <span class="version-date">June 21, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/lending</span> endpoints for merchant lending programs</li>
+                        <li>Support for automated underwriting based on payment history</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.47.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.47.1</span>
+                    <span class="version-date">June 28, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Resolved underwriting calculation errors for seasonal businesses</li>
+                        <li>Fixed loan repayment scheduling conflicts with existing payment obligations</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.48.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.48.0</span>
+                    <span class="version-date">July 5, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Support for social commerce integrations (Instagram, TikTok Shop)</li>
+                        <li>New <span class="code">/v2/social/products</span> for product catalog sync</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type removed">Removed</div>
+                    <ul class="changes-list">
+                        <li>Removed WebSocket support for real-time updates (use SSE instead)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.48.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.48.1</span>
+                    <span class="version-date">July 12, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type fixed">Fixed</div>
+                    <ul class="changes-list">
+                        <li>Fixed product sync failures for items with emoji in descriptions</li>
+                        <li>Corrected social platform webhook verification for Instagram Shop</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.49.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.49.0</span>
+                    <span class="version-date">July 19, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>Introduced pay-by-bank with instant account verification</li>
+                        <li>Support for request-to-pay messaging (ISO 20022)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.49.1 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.49.1</span>
+                    <span class="version-date">July 26, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type changed">Changed</div>
+                    <ul class="changes-list">
+                        <li>Enhanced instant account verification success rates</li>
+                        <li>Improved request-to-pay message formatting for better compatibility</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- v2.50.0 -->
+            <div class="version">
+                <div class="version-header">
+                    <span class="version-number">v2.50.0</span>
+                    <span class="version-date">August 2, 2027</span>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type added">Added</div>
+                    <ul class="changes-list">
+                        <li>New <span class="code">/v2/insurance</span> endpoints for payment protection products</li>
+                        <li>Support for chargeback insurance and payment guarantees</li>
+                    </ul>
+                </div>
+
+                <div class="change-section">
+                    <div class="change-type security">Security</div>
+                    <ul class="changes-list">
+                        <li>Implemented zero-knowledge proof authentication for privacy-preserving payments</li>
+                    </ul>
+                </div>
+            </div>
+
 <!-- Version 2.4.0 -->
             <div class="version">
                 <div class="version-header">
