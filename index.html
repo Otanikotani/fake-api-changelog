@@ -34,6 +34,21 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
@@ -212,6 +227,9 @@
 <body>
     <div class="container">
         <header>
+            <div class="logo">
+                <img src="img.png" alt="PayFlow Logo">
+            </div>
             <h1>PayFlow API Changelog</h1>
             <p>Track updates, improvements, and fixes to our payment processing API</p>
         </header>
